@@ -16,7 +16,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name',
+        'last_name',
+        'email',
+        'username',
+        'isadmin',
+        'password',
     ];
 
     /**
@@ -36,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the orders that placed by user.
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
