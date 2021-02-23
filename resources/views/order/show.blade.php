@@ -5,7 +5,7 @@
         <div class="card">
             <h5 class="card-header">Order Tracker</h5>
             <div class="card-body">
-{{--                <order-progress status="{{ $order->status->name}}" initial=" {{ $order->status->percent }}" order_id="{{ $order->id }}"></order-progress>--}}
+                <order-progress status="{{ $order->status->name}}" initial=" {{ $order->status->percent }}" order_id="{{ $order->id }}"></order-progress>
 
 {{--                <order-alert user_id="{{ auth()->user()->id }}"></order-alert>--}}
 

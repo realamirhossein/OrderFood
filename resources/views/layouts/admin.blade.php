@@ -7,7 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Order Food') }}</title>
+    <title>{{ config('app.name', 'Legal') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
@@ -15,13 +18,14 @@
     <link rel="stylesheet" href="{{ asset('/css/adminlte.css') }}">
 
     <!-- bootstrap rtl -->
-{{--    <link rel="stylesheet" href="{{ asset('/css/bootstrap-rtl.min.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap-rtl.min.css') }}">
     <!-- template rtl version -->
     <link rel="stylesheet" href="{{ asset('/css/custom-style.css') }}">
+{{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
+
 
     @yield('extra-css')
 </head>
-<body>
 <body class="sidebar-mini">
 <script>
     (function () {
@@ -32,6 +36,7 @@
     })();
 </script>
 <div class="wrapper">
+<div id="app">
 @include('inc.admin-nav')
 
 {{--@unless(isset($noAdminSideBar))--}}
@@ -56,18 +61,18 @@
         </div>
         <!-- /.content -->
     </div>
-<!-- /.content-wrapper --
-{{--@include('inc.admin-controlsidebar')--}}
+
 @include('inc.admin-footer')
 
     </div>
+</div>
 
 <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-{{--    <script src="{{ asset('/plugins/jquery/jquery.min.js') }}"></script>--}}
+    <script src="{{ asset('/plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap 4 -->
-{{--    <script src="{{ asset('/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>--}}
+    <script src="{{ asset('/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('/js/adminlte.min.js') }}"></script>
 

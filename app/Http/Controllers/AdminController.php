@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\OrderStatusChanged;
 use App\Food;
 use App\Menu;
 use App\Order;
@@ -37,7 +38,7 @@ class AdminController extends Controller
 
     public function orders()
     {
-        $orders = Order::paginate(20);
+        $orders = Order::orderBy('created_at', 'DESC')->paginate(20);
         return view('admin.orders.index',compact('orders'));
     }
 
@@ -143,7 +144,7 @@ class AdminController extends Controller
         $order->status_id = $request->status_id;
         $order->save();
 
-//        event(new OrderStatusChanged($order));
+        event(new OrderStatusChanged($order));
 
         return back()->with('success', 'Order Status updated successfully!');
     }
