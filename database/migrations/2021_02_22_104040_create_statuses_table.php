@@ -16,7 +16,7 @@ class CreateStatusesTable extends Migration
         Schema::create('statuses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('percent')->unsigned()->nullable();
+            $table->integer('percent')->unsigned()->default(1);
             $table->timestamps();
         });
     }

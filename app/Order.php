@@ -40,7 +40,7 @@ class Order extends Model
     }
 
     /**
-     * Get the food of the order.
+     * Get the shop of the order.
      */
     public function food()
     {

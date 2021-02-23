@@ -18,7 +18,7 @@ class Status extends Model
     ];
 
     /**
-     * Get food with same status.
+     * Get shop with same status.
      */
     public function orders()
     {

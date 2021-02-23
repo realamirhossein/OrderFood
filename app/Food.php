@@ -22,7 +22,7 @@ class Food extends Model
     ];
 
     /**
-     * Get the menu of the food.
+     * Get the menu of the shop.
      */
     public function menu()
     {
