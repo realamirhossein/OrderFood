@@ -26,7 +26,7 @@ Route::get('/order/{order}', 'UserOrderController@show')->name('showUserOrder');
 Route::get('/order-history', 'UserOrderController@index')->name('showUserOrderHistory');
 
 //Admin Routes
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['middleware' => ['admin'] ,'prefix' => 'admin'], function () {
     Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
     Route::get('/users', 'AdminController@users')->name('users.index');
     Route::get('/users/{user}/edit', 'AdminController@editUser')->name('users.edit');

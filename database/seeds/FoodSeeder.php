@@ -12,7 +12,7 @@ class FoodSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('shop')->delete();
+        DB::table('foods')->delete();
         // Pizza
         for ($i=1; $i <= 10; $i++) {
             Food::create([

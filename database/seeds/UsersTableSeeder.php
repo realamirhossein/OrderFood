@@ -17,8 +17,8 @@ class UsersTableSeeder extends Seeder
 
 
         $items = [
-            ['first_name' => 'admin', 'last_name' => 'admin', 'email' => 'admin@test.com' ,'username' => 'admin', 'password' => Hash::make('Aa123456'), 'isadmin' => 1],
-            ['first_name' => 'regular', 'last_name' => 'user', 'email' => 'user@test.com' ,'username' => 'user', 'password' => Hash::make('123456aA')],
+            ['first_name' => 'Jown', 'last_name' => 'Doe', 'email' => 'admin@test.com' ,'username' => 'admin', 'password' => Hash::make('Aa123456'), 'isadmin' => 1],
+            ['first_name' => 'Foo', 'last_name' => 'Bar', 'email' => 'user@test.com' ,'username' => 'user', 'password' => Hash::make('123456aA')],
         ];
 
         foreach ($items as $item){

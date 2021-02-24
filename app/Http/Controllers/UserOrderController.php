@@ -33,7 +33,7 @@ class UserOrderController extends Controller
             ]);
             $food->decrement('qty', 1);
 
-            return redirect()->route('showUserOrder', $order)->with('success', 'Order received! Please wait for comfirmation.');
+            return redirect()->route('showUserOrder', $order)->with('success', 'Order received!');
         }
     }
 

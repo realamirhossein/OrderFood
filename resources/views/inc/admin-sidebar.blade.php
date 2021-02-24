@@ -130,6 +130,26 @@
                         </ul>
                     </li>
 
+                    <li class="nav-item has-treeview">
+                        <a class="nav-link" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('خروج') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('foods.index') }}"
+                                   class="nav-link {{ Route::is('foods.index') ? 'active' : '' }}">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>غذاها</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
 {{--                    <li class="nav-item">--}}
 {{--                        <a href="{{ url('/change-password') }}"--}}
 {{--                           class="nav-link  {{ Request::is('change-password') ? 'active' : '' }}">--}}
